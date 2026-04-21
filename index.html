@@ -3,146 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หมวกน้อย - ส่งเสริมการใส่หมวกในเด็กเล็ก</title>
+    <title>SafeHead - หมวกนิรภัยสำหรับเด็กเล็ก</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">
-                <span class="logo-icon">🧢</span>
-                <span class="logo-text">หมวกน้อย</span>
+                <span class="logo-icon">⛑️</span>
+                <span class="logo-text">SafeHead</span>
             </a>
             <ul class="nav-menu">
-                <li><a href="#benefits">ประโยชน์</a></li>
-                <li><a href="#choose">วิธีเลือก</a></li>
+                <li><a href="#why">ทำไมต้องใส่</a></li>
+                <li><a href="#types">ประเภทหมวก</a></li>
+                <li><a href="#fit">วัดขนาด</a></li>
                 <li><a href="#tips">เคล็ดลับ</a></li>
-                <li><a href="#faq">คำถามที่พบบ่อย</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
             <button class="menu-toggle" aria-label="เมนู">☰</button>
         </div>
     </nav>
 
     <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
         <div class="hero-content">
-            <h1>ปกป้องลูกน้อยด้วย<span class="highlight">หมวกใบโปรด</span></h1>
+            <span class="badge">🛡️ ปกป้องสมองน้อย ๆ ของลูก</span>
+            <h1>หมวกนิรภัย<br>= <span class="highlight">ชีวิตที่ปลอดภัย</span></h1>
             <p class="hero-subtitle">
-                สร้างนิสัยรักการใส่หมวกให้ลูก<br>
-                เพื่อสุขภาพและความปลอดภัยตั้งแต่วัยเยาว์
+                การใส่หมวกนิรภัยที่ถูกต้องลดความเสี่ยงการบาดเจ็บที่สมองในเด็กได้ถึง <strong>85%</strong>
+                เรียนรู้วิธีเลือก สวมใส่ และสร้างนิสัยความปลอดภัยให้ลูกคุณ
             </p>
             <div class="hero-buttons">
-                <a href="#benefits" class="btn btn-primary">เริ่มเรียนรู้</a>
-                <a href="#tips" class="btn btn-secondary">ดูเคล็ดลับ</a>
+                <a href="#fit" class="btn btn-primary">วัดขนาดหัวลูก</a>
+                <a href="#types" class="btn btn-secondary">ดูประเภทหมวก</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number" data-count="85">0</div>
+                    <div class="stat-suffix">%</div>
+                    <div class="stat-label">ลดความเสี่ยงบาดเจ็บสมอง</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-count="70">0</div>
+                    <div class="stat-suffix">%</div>
+                    <div class="stat-label">ลดความเสี่ยงเสียชีวิต</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-count="3">0</div>
+                    <div class="stat-suffix">x</div>
+                    <div class="stat-label">ปลอดภัยกว่าไม่ใส่</div>
+                </div>
             </div>
         </div>
         <div class="hero-visual">
-            <div class="sun">☀️</div>
-            <div class="child-illustration">
-                <div class="hat">🧢</div>
-                <div class="face">👶</div>
-            </div>
-            <div class="cloud cloud-1">☁️</div>
-            <div class="cloud cloud-2">☁️</div>
+            <svg class="helmet-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="helmetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#FF6B35"/>
+                        <stop offset="100%" stop-color="#F7931E"/>
+                    </linearGradient>
+                    <linearGradient id="faceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#FFD5B8"/>
+                        <stop offset="100%" stop-color="#FFB088"/>
+                    </linearGradient>
+                </defs>
+                <circle class="impact-ring ring-1" cx="150" cy="140" r="110" fill="none" stroke="#FF6B35" stroke-width="2" opacity="0.4"/>
+                <circle class="impact-ring ring-2" cx="150" cy="140" r="130" fill="none" stroke="#FF6B35" stroke-width="2" opacity="0.3"/>
+                <circle class="impact-ring ring-3" cx="150" cy="140" r="150" fill="none" stroke="#FF6B35" stroke-width="2" opacity="0.2"/>
+                <ellipse cx="150" cy="170" rx="60" ry="70" fill="url(#faceGrad)"/>
+                <circle cx="132" cy="170" r="4" fill="#2D3748"/>
+                <circle cx="168" cy="170" r="4" fill="#2D3748"/>
+                <path d="M 138 195 Q 150 205 162 195" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M 90 150 Q 90 80 150 70 Q 210 80 210 150 L 210 165 Q 210 155 200 150 L 100 150 Q 90 155 90 165 Z" fill="url(#helmetGrad)"/>
+                <path d="M 100 155 L 200 155" stroke="#FFF" stroke-width="3" opacity="0.5"/>
+                <circle cx="120" cy="120" r="6" fill="#FFF" opacity="0.6"/>
+                <path d="M 95 165 Q 90 210 125 225" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M 205 165 Q 210 210 175 225" stroke="#2D3748" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <rect x="130" y="220" width="40" height="10" rx="3" fill="#2D3748"/>
+            </svg>
         </div>
     </section>
 
-    <section id="benefits" class="benefits">
+    <section id="types" class="types-section">
         <div class="container">
-            <h2 class="section-title">ทำไมเด็กเล็กควรใส่หมวก?</h2>
+            <h2 class="section-title">ประเภทหมวกนิรภัยสำหรับเด็ก</h2>
             <p class="section-subtitle">
-                ผิวและศีรษะของเด็กบอบบางกว่าผู้ใหญ่ การใส่หมวกจึงเป็นเกราะป้องกันสำคัญ
+                แต่ละกิจกรรมต้องใช้หมวกต่างกัน เลือกให้ถูกต้องเพื่อความปลอดภัยสูงสุด
             </p>
 
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">☀️</div>
-                    <h3>ป้องกันรังสี UV</h3>
-                    <p>ผิวของเด็กไวต่อรังสี UV มากกว่าผู้ใหญ่ 3 เท่า หมวกปีกกว้างช่วยลดความเสี่ยงจากแสงแดด</p>
-                </div>
+            <div class="types-tabs">
+                <button class="tab-btn active" data-tab="motorcycle">
+                    <span class="tab-emoji">🏍️</span>
+                    <span>มอเตอร์ไซค์</span>
+                </button>
+                <button class="tab-btn" data-tab="bicycle">
+                    <span class="tab-emoji">🚲</span>
+                    <span>จักรยาน</span>
+                </button>
+                <button class="tab-btn" data-tab="skate">
+                    <span class="tab-emoji">🛹</span>
+                    <span>สเก็ต/สกูตเตอร์</span>
+                </button>
+            </div>
 
-                <div class="benefit-card">
-                    <div class="benefit-icon">🌡️</div>
-                    <h3>ปรับอุณหภูมิร่างกาย</h3>
-                    <p>ศีรษะเป็นจุดที่ร่างกายคายความร้อนมากที่สุด หมวกช่วยรักษาอุณหภูมิในวันที่อากาศเย็น</p>
+            <div class="tab-panel active" data-panel="motorcycle">
+                <div class="panel-content">
+                    <div class="panel-left">
+                        <h3>หมวกนิรภัยมอเตอร์ไซค์</h3>
+                        <p>ปกป้องเด็กเมื่อนั่งซ้อนมอเตอร์ไซค์ ต้องมีมาตรฐาน <strong>มอก. 369</strong> เท่านั้น</p>
+                        <ul class="feature-list">
+                            <li>✓ ใช้ครอบทั้งศีรษะ (Full Face) หรือครอบครึ่ง (Open Face)</li>
+                            <li>✓ มีกระจังหน้ากันลม/ฝุ่น/แมลง</li>
+                            <li>✓ สายรัดคางล็อกแน่น ไม่หลุดง่าย</li>
+                            <li>✓ โฟม EPS ดูดซับแรงกระแทกภายใน</li>
+                        </ul>
+                        <div class="standard-badges">
+                            <span class="std-badge">มอก. 369</span>
+                            <span class="std-badge">DOT</span>
+                            <span class="std-badge">ECE 22.06</span>
+                        </div>
+                    </div>
+                    <div class="panel-right">
+                        <div class="helmet-card motorcycle-card">
+                            <div class="helmet-emoji">🏍️</div>
+                            <div class="price-tag">ราคา 800-3,500 บาท</div>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div class="benefit-card">
-                    <div class="benefit-icon">🛡️</div>
-                    <h3>ปกป้องศีรษะ</h3>
-                    <p>ช่วยลดแรงกระแทกเล็กน้อยเมื่อหกล้มหรือชน โดยเฉพาะวัยที่เริ่มหัดเดิน</p>
+            <div class="tab-panel" data-panel="bicycle">
+                <div class="panel-content">
+                    <div class="panel-left">
+                        <h3>หมวกจักรยาน</h3>
+                        <p>น้ำหนักเบา ระบายอากาศดี เหมาะสำหรับเด็กที่หัดขี่จักรยาน ความเร็วไม่สูง</p>
+                        <ul class="feature-list">
+                            <li>✓ มีช่องระบายอากาศหลายจุด</li>
+                            <li>✓ น้ำหนักเบา 200-400 กรัม</li>
+                            <li>✓ สายรัดปรับได้ ติดแน่นที่คาง</li>
+                            <li>✓ มีไฟ LED ด้านหลัง (รุ่นใหม่)</li>
+                        </ul>
+                        <div class="standard-badges">
+                            <span class="std-badge">CPSC</span>
+                            <span class="std-badge">EN 1078</span>
+                            <span class="std-badge">ASTM F1447</span>
+                        </div>
+                    </div>
+                    <div class="panel-right">
+                        <div class="helmet-card bicycle-card">
+                            <div class="helmet-emoji">🚲</div>
+                            <div class="price-tag">ราคา 500-2,000 บาท</div>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div class="benefit-card">
-                    <div class="benefit-icon">👁️</div>
-                    <h3>ถนอมสายตา</h3>
-                    <p>ปีกหมวกช่วยบังแสงแดด ลดอาการหยีตา และปกป้องดวงตาจากรังสีที่เป็นอันตราย</p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">💧</div>
-                    <h3>ลดการสูญเสียน้ำ</h3>
-                    <p>เด็กที่อยู่กลางแดดมักเหงื่อออกมาก หมวกช่วยให้ร่างกายไม่สูญเสียน้ำเร็วเกินไป</p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">✨</div>
-                    <h3>สร้างความมั่นใจ</h3>
-                    <p>หมวกใบโปรดเป็นเหมือนเพื่อนคู่ใจ ช่วยให้เด็กรู้สึกปลอดภัยและมั่นใจมากขึ้น</p>
+            <div class="tab-panel" data-panel="skate">
+                <div class="panel-content">
+                    <div class="panel-left">
+                        <h3>หมวกสเก็ต/สกูตเตอร์</h3>
+                        <p>หมวกทรงกลมครอบทั้งศีรษะและท้ายทอย รองรับการล้มแบบหลายทิศทาง</p>
+                        <ul class="feature-list">
+                            <li>✓ ทรงกลมครอบท้ายทอย</li>
+                            <li>✓ เปลือกนอก ABS แข็งแรง</li>
+                            <li>✓ โฟมบุหนา ดูดซับแรงดี</li>
+                            <li>✓ รองรับแรงกระแทกได้หลายครั้ง</li>
+                        </ul>
+                        <div class="standard-badges">
+                            <span class="std-badge">ASTM F1492</span>
+                            <span class="std-badge">CE EN 1078</span>
+                            <span class="std-badge">CPSC</span>
+                        </div>
+                    </div>
+                    <div class="panel-right">
+                        <div class="helmet-card skate-card">
+                            <div class="helmet-emoji">🛹</div>
+                            <div class="price-tag">ราคา 600-1,800 บาท</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="choose" class="choose">
+    <section id="why" class="why-section">
         <div class="container">
-            <h2 class="section-title">วิธีเลือกหมวกให้เด็กเล็ก</h2>
+            <h2 class="section-title">ทำไมเด็กเล็กต้องใส่หมวกนิรภัย?</h2>
             <p class="section-subtitle">
-                หมวกที่ดีต้องเหมาะกับวัย ฤดูกาล และกิจกรรมของลูก
+                กะโหลกของเด็กยังบางและสมองยังพัฒนาไม่เต็มที่ การบาดเจ็บที่ศีรษะส่งผลระยะยาวได้
             </p>
 
-            <div class="choose-grid">
-                <div class="choose-card">
-                    <span class="step-number">01</span>
-                    <h3>ขนาดพอดีศีรษะ</h3>
-                    <p>วัดเส้นรอบศีรษะเหนือคิ้วประมาณ 2 ซม. หมวกไม่ควรแน่นจนบีบ หรือหลวมจนหลุดง่าย</p>
-                    <ul class="size-chart">
-                        <li><strong>0-6 เดือน:</strong> 35-42 ซม.</li>
-                        <li><strong>6-12 เดือน:</strong> 42-46 ซม.</li>
-                        <li><strong>1-2 ปี:</strong> 46-48 ซม.</li>
-                        <li><strong>2-4 ปี:</strong> 48-50 ซม.</li>
-                        <li><strong>4-6 ปี:</strong> 50-53 ซม.</li>
-                    </ul>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">🧠</div>
+                    <h3>ป้องกันบาดเจ็บสมอง</h3>
+                    <p>กะโหลกของเด็กยังบางกว่าผู้ใหญ่ถึง 1 ใน 3 หมวกนิรภัยช่วยดูดซับแรงกระแทกได้ถึง 85%</p>
                 </div>
-
-                <div class="choose-card">
-                    <span class="step-number">02</span>
-                    <h3>วัสดุระบายอากาศดี</h3>
-                    <p>เลือกผ้าฝ้าย 100% หรือผ้าลินินในฤดูร้อน เพื่อให้หนังศีรษะไม่อับชื้น ป้องกันผดผื่น</p>
+                <div class="why-card">
+                    <div class="why-icon">⚖️</div>
+                    <h3>เป็นกฎหมาย</h3>
+                    <p>ตาม พ.ร.บ.จราจร เด็กที่โดยสารมอเตอร์ไซค์ต้องสวมหมวกนิรภัย ไม่ปฏิบัติมีโทษปรับ</p>
                 </div>
-
-                <div class="choose-card">
-                    <span class="step-number">03</span>
-                    <h3>ปีกกว้างพอเหมาะ</h3>
-                    <p>หมวกกันแดดควรมีปีกกว้างอย่างน้อย 7 ซม. เพื่อบังใบหน้า ต้นคอ และหู</p>
+                <div class="why-card">
+                    <div class="why-icon">💙</div>
+                    <h3>ลดอัตราเสียชีวิต</h3>
+                    <p>อุบัติเหตุจากมอเตอร์ไซค์เป็นสาเหตุการเสียชีวิตอันดับ 1 ในเด็กไทย หมวกช่วยลดได้ 70%</p>
                 </div>
-
-                <div class="choose-card">
-                    <span class="step-number">04</span>
-                    <h3>สายรัดคาง (ถ้าจำเป็น)</h3>
-                    <p>สำหรับเด็กเล็กควรมีสายรัดแบบปรับได้และถอดออกได้ เพื่อความปลอดภัย ป้องกันการหลุดและการบาดเจ็บ</p>
+                <div class="why-card">
+                    <div class="why-icon">🎯</div>
+                    <h3>สร้างนิสัยความปลอดภัย</h3>
+                    <p>เด็กที่คุ้นชินกับการสวมหมวกตั้งแต่เล็ก จะติดเป็นนิสัยเมื่อโตขึ้น</p>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="choose-card">
-                    <span class="step-number">05</span>
-                    <h3>ค่า UPF สูง</h3>
-                    <p>ในพื้นที่แดดจัด ควรเลือกหมวกที่มีค่า UPF 50+ ซึ่งป้องกันรังสี UV ได้มากกว่า 98%</p>
+    <section class="impact-section">
+        <div class="container">
+            <h2 class="section-title">หมวกนิรภัยปกป้องสมองได้อย่างไร?</h2>
+            <p class="section-subtitle">คลิกปุ่มด้านล่างเพื่อดูการทำงานของหมวกเมื่อเกิดแรงกระแทก</p>
+
+            <div class="impact-demo">
+                <svg class="impact-svg" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="brainGrad">
+                            <stop offset="0%" stop-color="#FFB5C5"/>
+                            <stop offset="100%" stop-color="#FF7A9C"/>
+                        </radialGradient>
+                    </defs>
+                    <g id="helmet-group">
+                        <path d="M 170 150 Q 170 80 250 75 Q 330 80 330 150 L 330 170 L 170 170 Z" fill="#FF6B35" stroke="#2D3748" stroke-width="2"/>
+                        <path d="M 178 155 Q 178 90 250 85 Q 322 90 322 155" fill="#FFF3E0" opacity="0.5"/>
+                    </g>
+                    <g id="skull-group">
+                        <ellipse cx="250" cy="170" rx="70" ry="80" fill="#F5E6D3" stroke="#2D3748" stroke-width="2"/>
+                        <ellipse cx="250" cy="170" rx="55" ry="65" fill="url(#brainGrad)" opacity="0.9"/>
+                        <path d="M 220 150 Q 230 160 220 170 Q 230 180 220 190" stroke="#D85878" stroke-width="1.5" fill="none"/>
+                        <path d="M 250 145 Q 260 155 250 165 Q 260 175 250 185" stroke="#D85878" stroke-width="1.5" fill="none"/>
+                        <path d="M 280 150 Q 270 160 280 170 Q 270 180 280 190" stroke="#D85878" stroke-width="1.5" fill="none"/>
+                    </g>
+                    <g id="impact-arrow" opacity="0">
+                        <path d="M 80 170 L 160 170" stroke="#E74C3C" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M 150 160 L 165 170 L 150 180" stroke="#E74C3C" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <text x="60" y="160" fill="#E74C3C" font-size="16" font-weight="700">แรงกระแทก</text>
+                    </g>
+                    <g id="impact-waves" opacity="0">
+                        <path d="M 340 150 Q 380 140 400 150" stroke="#4ECDC4" stroke-width="3" fill="none" opacity="0.6"/>
+                        <path d="M 340 170 Q 390 160 420 170" stroke="#4ECDC4" stroke-width="3" fill="none" opacity="0.5"/>
+                        <path d="M 340 190 Q 380 180 400 190" stroke="#4ECDC4" stroke-width="3" fill="none" opacity="0.4"/>
+                    </g>
+                </svg>
+                <div class="impact-controls">
+                    <button class="btn btn-primary" id="impactBtn">▶ เล่นภาพจำลอง</button>
+                    <button class="btn btn-secondary" id="toggleHelmet">ถอดหมวก (ทดสอบ)</button>
                 </div>
+                <div class="impact-message" id="impactMessage">กดปุ่มเพื่อดูการจำลองแรงกระแทก</div>
+            </div>
+        </div>
+    </section>
 
-                <div class="choose-card">
-                    <span class="step-number">06</span>
-                    <h3>ลวดลายที่ลูกชอบ</h3>
-                    <p>ให้ลูกมีส่วนร่วมในการเลือก สีสันและลายการ์ตูนที่ชอบ ช่วยเพิ่มโอกาสที่ลูกจะอยากใส่เอง</p>
+    <section id="fit" class="fit-section">
+        <div class="container">
+            <h2 class="section-title">เครื่องวัดขนาดหมวกให้ลูก</h2>
+            <p class="section-subtitle">ใส่เส้นรอบศีรษะของลูก ระบบจะแนะนำขนาดหมวกและช่วงวัยที่เหมาะสม</p>
+
+            <div class="fit-tool">
+                <div class="fit-input-area">
+                    <label for="headSize">เส้นรอบศีรษะของลูก (เซนติเมตร)</label>
+                    <div class="input-wrapper">
+                        <input type="range" id="headSize" min="40" max="58" value="48" step="0.5">
+                        <div class="input-display">
+                            <span id="headSizeValue">48</span>
+                            <span class="unit">ซม.</span>
+                        </div>
+                    </div>
+                    <div class="input-guide">
+                        <p>💡 <strong>วิธีวัด:</strong> ใช้สายวัดรัดรอบศีรษะ เหนือคิ้วประมาณ 2 ซม. ผ่านจุดที่กว้างที่สุดด้านหลัง</p>
+                    </div>
+                </div>
+                <div class="fit-result" id="fitResult">
+                    <div class="size-display">
+                        <div class="size-label">ขนาดหมวกที่แนะนำ</div>
+                        <div class="size-value" id="sizeValue">M</div>
+                    </div>
+                    <div class="age-display">
+                        <div class="age-label">ช่วงอายุโดยประมาณ</div>
+                        <div class="age-value" id="ageValue">3-5 ปี</div>
+                    </div>
+                    <div class="fit-advice" id="fitAdvice">ขนาดมาตรฐานสำหรับเด็กวัยนี้</div>
+                </div>
+            </div>
+
+            <div class="fit-check">
+                <h3>เช็ค Fit 3 จุด ก่อนให้ลูกใส่</h3>
+                <div class="check-grid">
+                    <div class="check-card">
+                        <div class="check-num">1</div>
+                        <div class="check-icon">👆</div>
+                        <h4>ทดสอบ 2 นิ้ว</h4>
+                        <p>หมวกควรอยู่เหนือคิ้ว 2 นิ้วมือ ไม่เอียงหน้าหรือหลัง</p>
+                    </div>
+                    <div class="check-card">
+                        <div class="check-num">2</div>
+                        <div class="check-icon">✌️</div>
+                        <h4>สายรัด V</h4>
+                        <p>สายรัดต้องเป็นรูปตัว V ใต้ติ่งหู ไม่อยู่บนติ่งหู</p>
+                    </div>
+                    <div class="check-card">
+                        <div class="check-num">3</div>
+                        <div class="check-icon">👄</div>
+                        <h4>ทดสอบอ้าปาก</h4>
+                        <p>ให้ลูกอ้าปากกว้าง ควรรู้สึกว่าหมวกกดลงเล็กน้อย</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -150,73 +327,64 @@
 
     <section id="tips" class="tips">
         <div class="container">
-            <h2 class="section-title">เคล็ดลับให้ลูกยอมใส่หมวก</h2>
-            <p class="section-subtitle">
-                ถ้าลูกไม่ยอมใส่หมวก อย่าเพิ่งถอดใจ ลองวิธีเหล่านี้ดูครับ
-            </p>
+            <h2 class="section-title">เคล็ดลับให้ลูกยอมใส่หมวกนิรภัย</h2>
+            <p class="section-subtitle">ถ้าลูกต่อต้าน อย่าเพิ่งยอมแพ้ ลองเคล็ดลับเหล่านี้</p>
 
             <div class="tips-timeline">
                 <div class="tip-item">
                     <div class="tip-badge">1</div>
                     <div class="tip-content">
-                        <h3>เริ่มต้นตั้งแต่อายุน้อย</h3>
-                        <p>ยิ่งเริ่มให้ใส่หมวกเร็วเท่าไหร่ ลูกยิ่งชินง่าย ควรเริ่มตั้งแต่ 3-6 เดือนแรก</p>
+                        <h3>ใส่ตั้งแต่ครั้งแรกที่นั่งซ้อน</h3>
+                        <p>อย่าปล่อยให้ลูกนั่งมอเตอร์ไซค์ครั้งแรกโดยไม่ใส่หมวก เขาจะคิดว่าการไม่ใส่เป็นเรื่องปกติ</p>
                     </div>
                 </div>
-
                 <div class="tip-item">
                     <div class="tip-badge">2</div>
                     <div class="tip-content">
-                        <h3>ทำให้เป็นเรื่องสนุก</h3>
-                        <p>เล่นเกมส่องกระจก ชมลูกว่าหล่อ/สวย หรือให้หมวกมี "ชื่อ" ของตัวเอง</p>
+                        <h3>พ่อแม่ต้องใส่เป็นตัวอย่าง</h3>
+                        <p>เด็กเรียนรู้จากการเลียนแบบ ถ้าพ่อแม่ไม่ใส่ ลูกก็จะไม่เห็นความสำคัญ</p>
                     </div>
                 </div>
-
                 <div class="tip-item">
                     <div class="tip-badge">3</div>
                     <div class="tip-content">
-                        <h3>พ่อแม่เป็นต้นแบบ</h3>
-                        <p>เด็กเรียนรู้จากการเลียนแบบ ถ้าพ่อแม่ใส่หมวกด้วย ลูกก็จะอยากใส่ตาม</p>
+                        <h3>ให้ลูกเลือกสี/ลายเอง</h3>
+                        <p>เมื่อลูกมีส่วนตัดสินใจ จะรู้สึกเป็น "หมวกของฉัน" และอยากใส่มากขึ้น</p>
                     </div>
                 </div>
-
                 <div class="tip-item">
                     <div class="tip-badge">4</div>
                     <div class="tip-content">
-                        <h3>เริ่มจากเวลาสั้น ๆ</h3>
-                        <p>ให้ลูกใส่ 5-10 นาทีก่อน แล้วค่อยเพิ่มเวลาขึ้นทีละน้อย ไม่บังคับหรือฝืนใจ</p>
+                        <h3>เล่นเกม "ฮีโร่สวมหมวก"</h3>
+                        <p>เปรียบเทียบลูกกับตัวละครในการ์ตูน นักบินอวกาศ หรือซูเปอร์ฮีโร่ที่ต้องสวมหมวก</p>
                     </div>
                 </div>
-
                 <div class="tip-item">
                     <div class="tip-badge">5</div>
                     <div class="tip-content">
-                        <h3>มีหมวกหลายใบให้เลือก</h3>
-                        <p>ให้ลูกรู้สึกเป็นผู้ตัดสินใจ "วันนี้อยากใส่ใบไหนดี?" ทำให้ลูกมีความรู้สึกควบคุม</p>
+                        <h3>ห้าม Start เครื่องถ้ายังไม่ใส่</h3>
+                        <p>สร้างกฎชัดเจน "ยังไม่ใส่หมวก รถยังไม่ออก" ลูกจะเข้าใจว่านี่คือสิ่งจำเป็น</p>
                     </div>
                 </div>
-
                 <div class="tip-item">
                     <div class="tip-badge">6</div>
                     <div class="tip-content">
-                        <h3>เชื่อมโยงกับกิจกรรมสนุก</h3>
-                        <p>"ใส่หมวกแล้วเราไปเล่นสวนสนุกกันเถอะ!" ทำให้หมวกเชื่อมโยงกับประสบการณ์ดี ๆ</p>
+                        <h3>ซ้อมใส่ที่บ้านก่อน</h3>
+                        <p>ให้ลูกลองใส่หมวกเดินเล่นในบ้าน ดูทีวี หรือกินขนม เพื่อให้ชินกับน้ำหนัก</p>
                     </div>
                 </div>
-
                 <div class="tip-item">
                     <div class="tip-badge">7</div>
                     <div class="tip-content">
                         <h3>ชมเชยทุกครั้งที่ใส่</h3>
-                        <p>คำชมของพ่อแม่มีพลังมาก "เก่งจังที่ใส่หมวกเอง!" ช่วยเสริมพฤติกรรมเชิงบวก</p>
+                        <p>"เก่งมากที่ใส่หมวกเอง!" คำชมช่วยเสริมพฤติกรรมเชิงบวกและทำให้ลูกภูมิใจ</p>
                     </div>
                 </div>
-
                 <div class="tip-item">
                     <div class="tip-badge">8</div>
                     <div class="tip-content">
-                        <h3>อย่ายอมแพ้เวลาลูกดึงออก</h3>
-                        <p>ใส่กลับเข้าไปอย่างใจเย็น ไม่ดุ ไม่ตี ค่อย ๆ เบี่ยงเบนความสนใจไปที่อย่างอื่น</p>
+                        <h3>อธิบายเหตุผลด้วยภาษาเด็ก</h3>
+                        <p>"หมวกช่วยปกป้องหัวของหนูจากการบาดเจ็บ เหมือนเกราะของอัศวินเลย"</p>
                     </div>
                 </div>
             </div>
@@ -225,39 +393,44 @@
 
     <section class="quiz-section">
         <div class="container">
-            <h2 class="section-title">ลองเลือกหมวกให้ลูก</h2>
-            <p class="section-subtitle">ตอบคำถามสั้น ๆ เพื่อดูว่าหมวกแบบไหนเหมาะกับลูกของคุณ</p>
+            <h2 class="section-title">ลองเลือกหมวกนิรภัยให้ลูก</h2>
+            <p class="section-subtitle">ตอบ 3 คำถาม เพื่อดูว่าควรเลือกหมวกแบบไหน</p>
 
             <div class="quiz-container">
-                <div class="quiz-step" data-step="1">
+                <div class="quiz-progress">
+                    <div class="progress-bar" id="quizProgress"></div>
+                </div>
+                <div class="quiz-step active" data-step="1">
+                    <div class="step-indicator">คำถาม 1/3</div>
                     <h3>ลูกของคุณอายุเท่าไหร่?</h3>
                     <div class="quiz-options">
-                        <button class="quiz-option" data-value="baby">0-12 เดือน</button>
+                        <button class="quiz-option" data-value="baby">ต่ำกว่า 1 ปี</button>
                         <button class="quiz-option" data-value="toddler">1-3 ปี</button>
                         <button class="quiz-option" data-value="preschool">3-6 ปี</button>
+                        <button class="quiz-option" data-value="school">6-12 ปี</button>
                     </div>
                 </div>
-
                 <div class="quiz-step" data-step="2">
-                    <h3>ใส่หมวกในสถานการณ์ใดเป็นหลัก?</h3>
+                    <div class="step-indicator">คำถาม 2/3</div>
+                    <h3>กิจกรรมหลักที่ต้องใส่หมวก?</h3>
                     <div class="quiz-options">
-                        <button class="quiz-option" data-value="outdoor">เล่นกลางแจ้ง/ชายหาด</button>
-                        <button class="quiz-option" data-value="daily">ใส่ทั่วไปในชีวิตประจำวัน</button>
-                        <button class="quiz-option" data-value="winter">วันที่อากาศเย็น</button>
+                        <button class="quiz-option" data-value="motorcycle">นั่งมอเตอร์ไซค์</button>
+                        <button class="quiz-option" data-value="bicycle">ปั่นจักรยาน</button>
+                        <button class="quiz-option" data-value="skate">สเก็ต/สกูตเตอร์</button>
+                        <button class="quiz-option" data-value="multi">หลายอย่าง</button>
                     </div>
                 </div>
-
                 <div class="quiz-step" data-step="3">
-                    <h3>ลูกของคุณเป็นเด็กแบบไหน?</h3>
+                    <div class="step-indicator">คำถาม 3/3</div>
+                    <h3>งบประมาณของคุณ?</h3>
                     <div class="quiz-options">
-                        <button class="quiz-option" data-value="active">ซนมาก วิ่งเล่นตลอด</button>
-                        <button class="quiz-option" data-value="calm">นิ่งสงบ ไม่ค่อยดึงหมวก</button>
-                        <button class="quiz-option" data-value="picky">เลือกมาก ไม่ค่อยยอมใส่</button>
+                        <button class="quiz-option" data-value="budget">ต่ำกว่า 1,000 บาท</button>
+                        <button class="quiz-option" data-value="mid">1,000-2,000 บาท</button>
+                        <button class="quiz-option" data-value="premium">มากกว่า 2,000 บาท</button>
                     </div>
                 </div>
-
                 <div class="quiz-result">
-                    <div class="result-icon">🎉</div>
+                    <div class="result-icon">🎯</div>
                     <h3>คำแนะนำสำหรับลูกของคุณ</h3>
                     <p class="result-text"></p>
                     <button class="btn btn-primary quiz-restart">ทำใหม่อีกครั้ง</button>
@@ -269,36 +442,30 @@
     <section id="faq" class="faq">
         <div class="container">
             <h2 class="section-title">คำถามที่พ่อแม่ถามบ่อย</h2>
-
             <div class="faq-list">
                 <details class="faq-item">
-                    <summary>ลูกควรเริ่มใส่หมวกตั้งแต่อายุเท่าไหร่?</summary>
-                    <p>สามารถใส่ได้ตั้งแต่แรกเกิด โดยเฉพาะเมื่อออกแดด ควรเลือกหมวกนุ่มสำหรับทารก เนื่องจากทารกยังควบคุมอุณหภูมิร่างกายเองไม่ได้ดี และผิวไวต่อรังสี UV มาก แนะนำให้หลีกเลี่ยงแสงแดดจัดในเด็กอายุต่ำกว่า 6 เดือน</p>
+                    <summary>ลูกเล็กมาก (ต่ำกว่า 1 ปี) นั่งมอเตอร์ไซค์ได้ไหม?</summary>
+                    <p>ไม่แนะนำอย่างยิ่ง ทารกและเด็กเล็กต่ำกว่า 1 ปี กล้ามเนื้อคอยังไม่แข็งแรงพอที่จะรองรับน้ำหนักของหมวกและแรงสั่นสะเทือน ควรหลีกเลี่ยงการนั่งมอเตอร์ไซค์ หากจำเป็นจริง ๆ ต้องมีที่นั่งเด็กเฉพาะและไปในระยะทางใกล้ ๆ เท่านั้น</p>
                 </details>
-
                 <details class="faq-item">
-                    <summary>ใส่หมวกนาน ๆ จะทำให้ผมร่วงหรือเปล่า?</summary>
-                    <p>ถ้าหมวกไม่แน่นจนเกินไปและระบายอากาศได้ดี จะไม่ส่งผลต่อเส้นผม แต่ควรถอดหมวกเป็นระยะเพื่อให้ศีรษะโปร่ง และซักหมวกให้สะอาดเสมอ</p>
+                    <summary>หมวกนิรภัยเด็กราคาถูกปลอดภัยไหม?</summary>
+                    <p>ดูที่มาตรฐาน ไม่ใช่ราคา หมวกที่มี มอก. 369 ราคา 800 บาท ปลอดภัยกว่าหมวกไม่มีมาตรฐานราคา 2,000 บาท ห้ามซื้อหมวกไม่มีสัญลักษณ์มาตรฐานเด็ดขาด</p>
                 </details>
-
                 <details class="faq-item">
-                    <summary>ลูกเกลียดการใส่หมวกมาก ๆ ทำยังไงดี?</summary>
-                    <p>เริ่มจากใส่ในบ้านเป็นเวลาสั้น ๆ ทำให้สนุก เล่นหน้ากระจก ให้ลูกใส่หมวกให้ตุ๊กตา ค่อย ๆ ขยายเวลา และอย่าบังคับ หากลูกต้านจริง ๆ ลองเปลี่ยนรูปแบบหมวก เช่น จากหมวกแก๊ปเป็นหมวกบักเก็ต อาจช่วยได้</p>
+                    <summary>หมวกเคยตกแล้วใช้ต่อได้ไหม?</summary>
+                    <p>ถ้าตกจากที่สูง หรือเกิดการกระแทกรุนแรง ต้องเปลี่ยนใหม่ทันที แม้จะไม่เห็นรอยแตกภายนอก แต่โฟมภายในอาจยุบตัวแล้ว ทำให้ประสิทธิภาพลดลง</p>
                 </details>
-
                 <details class="faq-item">
-                    <summary>หมวกสีเข้มกับสีอ่อน เลือกแบบไหนดีกว่า?</summary>
-                    <p>สีเข้มดูดซับแสง UV ได้ดีกว่า แต่สะสมความร้อนมากกว่า สีอ่อนเย็นกว่าแต่ป้องกัน UV ได้น้อยกว่า ถ้าเลือกสีเข้ม ต้องเน้นผ้าระบายอากาศ หรือเลือกหมวกที่มีค่า UPF 50+ โดยไม่ต้องกังวลเรื่องสี</p>
+                    <summary>หมวกเด็กควรเปลี่ยนบ่อยแค่ไหน?</summary>
+                    <p>เปลี่ยนทุก 3-5 ปี หรือเมื่อลูกโตจนใส่ไม่ได้ หรือเมื่อหมวกผ่านการกระแทกรุนแรง โฟมภายในจะเสื่อมสภาพตามกาลเวลาแม้ไม่ใช้</p>
                 </details>
-
                 <details class="faq-item">
-                    <summary>ซักหมวกเด็กบ่อยแค่ไหน?</summary>
-                    <p>ถ้าใส่ทุกวัน ควรซักอย่างน้อยสัปดาห์ละครั้ง ใช้น้ำยาซักผ้าเด็กที่อ่อนโยน ไม่มีกลิ่นฉุน และตากในที่ร่ม ตากแดดจัดอาจทำให้ผ้าเสียรูป</p>
+                    <summary>หมวกผู้ใหญ่ไซส์เล็ก แทนหมวกเด็กได้ไหม?</summary>
+                    <p>ไม่ได้ หมวกเด็กถูกออกแบบมาเฉพาะสำหรับสรีระและน้ำหนักของเด็ก โฟมภายในและสายรัดต่างจากหมวกผู้ใหญ่ ควรซื้อหมวกที่ออกแบบสำหรับเด็กโดยเฉพาะ</p>
                 </details>
-
                 <details class="faq-item">
-                    <summary>ใส่หมวกในร่มจำเป็นไหม?</summary>
-                    <p>ในร่มที่อากาศปกติไม่จำเป็นต้องใส่ แต่หากอยู่ในห้องแอร์เย็นจัด หรือใกล้หน้าต่างที่แดดส่อง อาจใส่หมวกบางเบาได้ สำหรับทารกแรกเกิด หมวกช่วยรักษาอุณหภูมิในช่วงเดือนแรก</p>
+                    <summary>ทำความสะอาดหมวกนิรภัยยังไง?</summary>
+                    <p>ใช้ผ้าชุบน้ำสบู่อ่อน ๆ เช็ดภายนอก ส่วนบุภายในที่ถอดได้ (ถ้ามี) ให้ซักด้วยน้ำเย็น ตากในที่ร่ม ห้ามใช้สารเคมีแรง ๆ หรือน้ำร้อน</p>
                 </details>
             </div>
         </div>
@@ -307,9 +474,9 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-box">
-                <h2>เริ่มสร้างนิสัยดี ๆ ให้ลูกตั้งแต่วันนี้</h2>
-                <p>การใส่หมวกเป็นเรื่องเล็ก ๆ ที่สร้างความแตกต่างใหญ่ได้ตลอดชีวิตของลูก</p>
-                <a href="#home" class="btn btn-white">กลับไปด้านบน</a>
+                <h2>อย่ารอให้เกิดเหตุการณ์ไม่คาดฝัน</h2>
+                <p>หมวกนิรภัย = การลงทุนที่คุ้มค่าที่สุดสำหรับความปลอดภัยของลูก</p>
+                <a href="#fit" class="btn btn-white">เริ่มวัดขนาดเลย</a>
             </div>
         </div>
     </section>
@@ -318,26 +485,27 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <span class="logo-icon">🧢</span>
-                    <span class="logo-text">หมวกน้อย</span>
-                    <p>ส่งเสริมการใส่หมวกในเด็กเล็ก เพื่อสุขภาพและความปลอดภัย</p>
+                    <span class="logo-icon">⛑️</span>
+                    <span class="logo-text">SafeHead</span>
+                    <p>ส่งเสริมการใส่หมวกนิรภัยในเด็กเล็ก เพื่อป้องกันการบาดเจ็บและรักษาชีวิต</p>
                 </div>
                 <div class="footer-links">
                     <h4>เมนู</h4>
                     <ul>
-                        <li><a href="#benefits">ประโยชน์</a></li>
-                        <li><a href="#choose">วิธีเลือก</a></li>
+                        <li><a href="#why">ทำไมต้องใส่</a></li>
+                        <li><a href="#types">ประเภทหมวก</a></li>
+                        <li><a href="#fit">วัดขนาด</a></li>
                         <li><a href="#tips">เคล็ดลับ</a></li>
-                        <li><a href="#faq">คำถามที่พบบ่อย</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-info">
                     <h4>ข้อมูลอ้างอิง</h4>
-                    <p>ข้อมูลในเว็บไซต์นี้เพื่อการศึกษาเท่านั้น สำหรับคำแนะนำเฉพาะราย ควรปรึกษากุมารแพทย์</p>
+                    <p>ข้อมูลจาก องค์การอนามัยโลก (WHO), สำนักงานกองทุนสนับสนุนการสร้างเสริมสุขภาพ (สสส.) และ มูลนิธิรามาธิบดี</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 หมวกน้อย · ดูแลหัวใจดวงเล็ก ๆ ของคุณด้วยความใส่ใจ</p>
+                <p>© 2026 SafeHead · ปกป้องหัวใจดวงเล็ก ๆ ของคุณด้วยความใส่ใจ</p>
             </div>
         </div>
     </footer>
@@ -345,3 +513,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
